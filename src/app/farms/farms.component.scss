@@ -68,7 +68,6 @@
 .server-item__delete {
     position: absolute;
     right: 10px;
-    top: 8px;
 }
 
 // Responsive - This should be in separated Sass files
@@ -81,7 +80,8 @@
     .farm-item__desc {
         padding: 10px;
     }
-    .farm-item__desc--third {
+    .farm-item__desc--third,
+    .server-item__desc--third {
         padding-right: 35px;
     }
 }
