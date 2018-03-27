@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="farm-list-header col-sm-12" *ngIf="farms2">
+        <div class="farm-list-header__item">
+            <fa name="server"></fa> Farms <span>{{ farms2.length }}</span></div>
+        <div class="farm-list-header__item">
+            <fa name="desktop"></fa> Servers <span>{{ serverCount() }}</span></div>
+        <div class="farm-list-header__item">
+            <fa name="desktop"></fa> License Server Limit <span>59 / 60</span></div>
+    </div>
+    <ul class="farms-list col-lg-9" *ngIf="farms2">
+
+        <li *ngFor="let farm of farms2" class="farm-item container">
+            <div class="row">
+                <div class="farm-item__desc col-lg-2">
+                    <fa name="server"></fa> <span>Farm:</span> <b>{{farm.name}}</b>
+                </div>
+                <div class="farm-item__desc farm-item__desc--second col-lg-2">ULS Path:</div>
+                <div class="farm-item__desc farm-item__desc--third col-lg-8"><b>{{farm.uls}}</b></div>
+                <div class="farm-item__delete">
+                    <button class="btn" (click)="deleteFarm(farm)"><fa name="times"></fa></button>
+                </div>
+                <ul class="server-list" *ngIf="farm.servers">
+                    <li class="server-item row" *ngFor="let server of farm.servers">
+                        <div class="server-item__desc col-lg-2">
+                            <fa name="server"></fa> <b>{{ server.name }}</b>
+                        </div>
+                        <div class="server-item__desc server-item__desc--second col-lg-2">Roles:</div>
+                        <div class="server-item__desc server-item__desc--third col-lg-8">
+                            <span *ngFor="let role of server.roles">
+                                {{ role }},
+                            </span>
+                        </div>
+                        <div class="server-item__desc server-item__delete">
+                            <button class="btn" (click)="deleteServer(farm, server)"><fa name="times"></fa></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <div class="sidebar col-lg-3">
+        <div class="sidebar__button-list">
+            <a href="#" onclick='console.log("Add Farm")' class="sidebar__button">
+                <fa name="bars"></fa> Add Farm
+            </a>
+            <a href="#" onclick='console.log("Scan")' class="sidebar__button">
+                <fa name="bars"></fa> Scan
+            </a>
+            <a href="#" onclick='console.log("Import From SPDocKit")' id="ImportBtn" class="sidebar__button">
+                <fa name="bars"></fa> Import From SPDocKit
+            </a>
+        </div>
+    </div>
+</div>

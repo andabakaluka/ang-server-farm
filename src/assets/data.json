@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "name": "First farm",
+    "uls": "C://Program Files/Common Files/Microsoft Shared/Web Server Extensions/16/LOGS",
+    "servers": [{
+            "name": "My server 1.1",
+            "roles": ["Database", "Front-end with distributed Cache"],
+            "farm_id": 1
+        },
+        {
+            "name": "My server 1.2",
+            "roles": ["Database"],
+            "farm_id": 1
+        }
+    ]
+}, {
+    "id": 2,
+    "name": "Second farm",
+    "uls": "E://Program Files/Common Files/Microsoft Shared/Web Server Extensions/32/LOGS",
+    "servers": [{
+            "name": "My server 2.1",
+            "roles": ["Database", "Front-end with distributed Cache"],
+            "farm_id": 2
+        },
+        {
+            "name": "My server 2.2",
+            "roles": ["Database"],
+            "farm_id": 2
+        }
+    ]
+}, {
+    "id": 3,
+    "name": "Third farm",
+    "uls": "C://Program Files/Common Files/Microsoft Shared/Web Server Extensions/16/LOGS",
+    "servers": [{
+            "name": "My server 3.1",
+            "roles": ["Database", "Front-end with distributed Cache"],
+            "farm_id": 3
+        },
+        {
+            "name": "My server 3.2",
+            "roles": ["Database"],
+            "farm_id": 3
+        },
+        {
+            "name": "My server 3.3",
+            "roles": ["Database", "Front-end with distributed Cache", "Front-end with distributed Cache"],
+            "farm_id": 3
+        }
+    ]
+}]

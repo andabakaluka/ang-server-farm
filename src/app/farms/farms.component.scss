@@ -1,0 +1,98 @@
+// Buttons
+.btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+// Farm styles
+.farm-list-header {
+    margin: 20px 0;
+}
+
+.farm-list-header__item {
+    float: left;
+    margin-right: 20px;
+    span {
+        color: #ef9e4b;
+        font-size: 16px;
+        padding: 0 4px;
+    }
+}
+
+.farms-list {
+    list-style-type: none;
+    float: left;
+}
+
+.farm-item {
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #f3f3f3;
+}
+
+.farm-item__desc {
+    padding: 5px 10px;
+    &--third {
+        padding-right: 35px;
+    }
+}
+
+.farm-item__delete {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+// Server styles
+.server-list {
+    padding: 15px;
+    list-style: none;
+    background: white;
+    width: 100%;
+}
+
+.server-item {
+    position: relative;
+    padding-bottom: 10px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.server-item__desc {
+    padding: 0 10px;
+}
+
+.server-item__delete {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+// Responsive - This should be in separated Sass files
+// like most of the code, but for the sake of fast-coding it's like this
+@media (min-width: 992px) {
+    .server-item__desc--second,
+    .farm-item__desc--second {
+        text-align: right;
+    }
+    .farm-item__desc {
+        padding: 10px;
+    }
+    .farm-item__desc--third {
+        padding-right: 35px;
+    }
+}
+
+.sidebar__button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background: #ef9e4b;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+}
